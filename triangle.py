@@ -1,3 +1,6 @@
+import unittest
+
+
 def area(a, h):
     '''
     Возвращает площадь треугольника
@@ -24,3 +27,15 @@ def perimeter(a, b, c):
             a + b + c: периметр треугольника
     '''
     return a + b + c
+
+
+class SquareTestCase(unittest.TestCase):
+    def test_area_mul(self):
+        res = area(10, 5)
+        self.assertEqual(res, 25)
+    
+    def test_perimeter_mul(self):
+        res = perimeter(5, 3, 4)
+        self.assertEqual(res, 12)
+    
+
